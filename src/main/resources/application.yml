@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: taskhub-cloud-backend
+
+# No server.servlet.context-path in base/prod.
+# In production Tomcat maps /taskhub-cloud from WAR name (taskhub-cloud.war).
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html

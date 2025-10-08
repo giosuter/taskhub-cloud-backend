@@ -1,0 +1,33 @@
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+  datasource:
+    url: jdbc:mariadb://taskprod.zitatusi.dbs.hostpoint.internal:3306/zitatusi_taskprod?useUnicode=true&characterEncoding=utf8
+    username: 'zitatusi_tasku'
+    password: 'TriderG7.-$'
+    driver-class-name: org.mariadb.jdbc.Driver
+    hikari:
+      pool-name: taskhub-hikari
+      maximum-pool-size: 10
+      minimum-idle: 2
+      connection-timeout: 30000
+      idle-timeout: 60000
+      validation-timeout: 5000
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate.dialect: org.hibernate.dialect.MariaDBDialect
+      hibernate.format_sql: false
+
+# IMPORTANT (prod):
+# - Do NOT set server.servlet.context-path here. Tomcat maps /taskhub-cloud from the WAR name (taskhub-cloud.war).
+# - Consider moving secrets to environment variables in Hostpoint:
+#     SPRING_DATASOURCE_URL=jdbc:mariadb://taskprod.zitatusi.dbs.hostpoint.internal:3306/zitatusi_taskprod?useUnicode=true&characterEncoding=utf8
+#     SPRING_DATASOURCE_USERNAME=zitatusi_tasku
+#     SPRING_DATASOURCE_PASSWORD='TriderG7.-$'
+#   These will override the YAML automatically.
