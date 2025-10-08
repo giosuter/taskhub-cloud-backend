@@ -1,0 +1,29 @@
+# Maven
+/target/
+/.mvn/wrapper/maven-wrapper.jar
+
+# STS4 / Eclipse
+/.project
+/.classpath
+/.settings/
+/.bin/
+
+# IntelliJ
+/.idea/
+/*.iml
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# H2 database files (if ever persisted)
+/*.mv.db
+/*.h2.db
+
+# Temporary files
+*.swp
+*~
