@@ -8,6 +8,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -20,12 +21,13 @@ class TaskControllerIntegrationTest {
 
 	@Test
 	void pingWorks() throws Exception {
-		mvc.perform(get("/taskhub-cloud/api/ping")).andExpect(status().isOk())
+		// IMPORTANT: no /taskhub-cloud prefix when using MockMvc
+		mvc.perform(get("/api/ping")).andDo(print()).andExpect(status().isOk())
 				.andExpect(content().string("TaskHub Cloud backend is alive"));
 	}
 
 	@Test
 	void listTasksWorks() throws Exception {
-		mvc.perform(get("/taskhub-cloud/api/tasks")).andExpect(status().isOk());
+		mvc.perform(get("/api/tasks")).andDo(print()).andExpect(status().isOk());
 	}
 }
