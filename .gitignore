@@ -1,29 +1,61 @@
-# Maven
-/target/
-/.mvn/wrapper/maven-wrapper.jar
-
-# STS4 / Eclipse
-/.project
-/.classpath
-/.settings/
-/.bin/
-
-# IntelliJ
-/.idea/
-/*.iml
-
-# OS junk
+# -----------------------------
+# macOS / OS
+# -----------------------------
 .DS_Store
 Thumbs.db
 
-# Logs
+# -----------------------------
+# Eclipse / STS
+# -----------------------------
+.project
+.classpath
+.settings/
+.springBeans
+
+# -----------------------------
+# IntelliJ / VS Code (optional)
+# -----------------------------
+.idea/
+*.iml
+out/
+.vscode/
+
+# -----------------------------
+# Backend (Maven / Spring Boot)
+# -----------------------------
+target/
+**/target/
+**/surefire-reports/
+**/failsafe-reports/
 logs/
 *.log
 
-# H2 database files (if ever persisted)
-/*.mv.db
-/*.h2.db
+# JaCoCo coverage outputs
+jacoco.exec
+**/jacoco.exec
+**/*.exec
+site/
+**/site/
+**/site/**
 
-# Temporary files
-*.swp
-*~
+# Safety: never commit generated reports under static
+src/main/resources/static/jacoco/
+src/main/resources/static/jacoco/**
+
+# -----------------------------
+# Frontend (Angular, later)
+# -----------------------------
+frontend/node_modules/
+frontend/dist/
+**/node_modules/
+**/dist/
+
+# STS/Eclipse
+backend/.metadata/
+backend/taskhub-backend/.factorypath
+
+# Angular build and cache folders
+.angular/
+dist/
+node_modules/
+
