@@ -4,6 +4,8 @@ spring:
       enabled: true
 
 server:
+  servlet:
+    context-path: /taskhub-cloud   
   error:
     include-message: always
     include-binding-errors: always
