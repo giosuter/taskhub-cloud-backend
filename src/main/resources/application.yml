@@ -1,0 +1,9 @@
+spring:
+  mvc:
+    problemdetails:
+      enabled: true
+
+server:
+  error:
+    include-message: always
+    include-binding-errors: always

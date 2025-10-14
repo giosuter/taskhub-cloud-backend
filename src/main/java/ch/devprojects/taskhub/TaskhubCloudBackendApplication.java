@@ -1,4 +1,4 @@
-package ch.deprojects.taskhub;
+package ch.devprojects.taskhub;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
