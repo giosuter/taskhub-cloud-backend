@@ -1,0 +1,132 @@
+############################################################
+# CORE BUILD ARTIFACTS
+############################################################
+target/
+build/
+out/
+logs/
+tmp/
+*.log
+*.tmp
+*.bak
+
+# Keep source targets if explicitly included later
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+############################################################
+# MAVEN WRAPPER + CACHE
+############################################################
+.mvn/
+!/.mvn/wrapper/maven-wrapper.jar
+mvnw
+mvnw.cmd
+
+############################################################
+# IDE FILES (STS4, IntelliJ, Eclipse, VS Code)
+############################################################
+
+# STS4 / Eclipse
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# VS Code
+.vscode/
+
+############################################################
+# 🧰 OS / SYSTEM FILES
+############################################################
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+Icon?
+*.swp
+*.swo
+*.orig
+
+############################################################
+# SENSITIVE FILES (env, credentials, backups)
+############################################################
+# Local environment variables or tokens
+*.env
+.env.local
+.env.*.local
+**/application-*.yml.bak
+**/application-*.properties.bak
+
+# Avoid committing personal config or backups
+*.backup
+*.tar
+*.tar.gz
+*.zip
+*.7z
+
+# SSH / secrets / keys
+*.pem
+*.key
+*.crt
+*.csr
+*.p12
+
+############################################################
+# TEST / COVERAGE / REPORTS
+############################################################
+/surefire-reports/
+/failsafe-reports/
+/jacoco/
+/test-output/
+/reports/
+
+############################################################
+# DOCKER / DEPLOYMENT (future-proof)
+############################################################
+/docker/
+/Dockerfile.local
+/docker-compose.override.yml
+**/deploy_*.sh
+**/build_*.sh
+**/restart_*.sh
+
+############################################################
+# FRONT-END OR UI ARTIFACTS (if built in submodules)
+############################################################
+# Angular or React dist folders inside backend repo
+/dist/
+/frontend/
+/node_modules/
+/package-lock.json
+/yarn.lock
+
+############################################################
+# MISC
+############################################################
+HELP.md
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+*.java~
